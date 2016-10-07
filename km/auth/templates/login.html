@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>运维管理系统</title>
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<style type="text/css">
+        .form-signin{		        	
+		    max-width: 400px;
+		    padding: 19px 29px 29px;
+		    margin: 0 auto 20px;
+		    background-color: #fff;
+		    border: 1px solid #e5e5e5;
+		    -webkit-border-radius: 5px;
+		    -moz-border-radius: 5px;
+		    border-radius: 5px;
+		    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+		    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+		    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	        }
+        .loginform{
+        	margin:15% 0 auto;
+        }
+
+	    </style>    
+	</head>
+	<body>
+		 <div class="container" >		 	
+            <div class="loginform" >
+
+				 	<form class="form-signin" role="form" method="POST" action="/login">
+						{% if message %}　{{message}} {% endif %}
+				 		<h1 class="form-signin-heading">综合管理平台</h1>
+				 		<div style='height:15px;clear:both;display:block'></div>
+				 		<input type="text" class="form-control" name="username" placeholder="用户名"  required autofocus>
+				 		    <div style='height:15px;clear:both;display:block'></div>
+				 		<input type="password" class="form-control" name="password" placeholder="密码"  required>
+
+				 		<div class="checkbox">
+				 		<label><input type="checkbox" value="remember-me">记住我</label>
+				 		</div>
+				 		<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+				   </form>	
+           </div>		 	
+		 </div>		
+	</body>
+</html>
